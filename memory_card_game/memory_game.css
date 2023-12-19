@@ -1,0 +1,234 @@
+.my_name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 46px;
+  text-align: center;
+  position: relative;
+  top: 10%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5)),
+    url(https://images.moneycontrol.com/static-mcnews/2022/12/rohan-reddy-8t2aqR9suDo-unsplash.jpg?impolicy=website&width=1600&height=900.jpg);
+}
+
+.wrapper {
+  box-sizing: content-box;
+  width: 15cm;
+  padding: 1cm 1.3cm;
+  background-image: linear-gradient(rgba(7, 3, 2, 0), rgba(7, 3, 2, 0)),
+    url(https://images.moneycontrol.com/static-mcnews/2022/12/rohan-reddy-8t2aqR9suDo-unsplash.jpg?impolicy=website&width=1600&height=900.jpg);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 0.3cm;
+  box-shadow: 0 0.4cm 1.2cm rgba(86, 66, 0, 0.2);
+}
+
+
+.game-container {
+  display: grid;
+  gap: 0.3cm;
+}
+
+  .game-container.no-clicking{
+    pointer-events: none;
+  }
+
+  .stats-container {
+    text-align: right;
+    margin-bottom: 0.5cm;
+    
+  }
+
+  .stats-container span {
+    font-weight: 1000;
+  }
+
+  .card-container {
+    position: relative;
+    width: 2.6cm;
+    height: 2.6cm;
+    cursor: pointer;
+  }
+
+  .card-before {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.8s ease-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background-image: linear-gradient(rgba(3, 2, 0.5, 0.5),rgba(3,2S, 0.5, 0.5)), url(https://images.moneycontrol.com/static-mcnews/2022/12/rohan-reddy-8t2aqR9suDo-unsplash.jpg?impolicy=website&width=1600&height=900.jpg);
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.8s ease-out;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background-image: linear-gradient(rgba(7, 3,2,0),rgba(7, 3, 2, 0)), url(https://images.moneycontrol.com/static-mcnews/2022/12/rohan-reddy-8t2aqR9suDo-unsplash.jpg?impolicy=website&width=1600&height=900.jpg);
+    transform: rotateY(180deg);
+  }
+
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+
+  .controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #31eff473;
+    top: 0;
+    
+  }
+
+  button {
+    border: none;
+    border-radius: 0.1cm;
+    padding: 0.4cm 0.6cm;
+    cursor: pointer;
+  }
+
+  #stop {
+    font-size: 0.9cm;
+    display: block;
+    margin: 0.5cm auto 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 2cm;
+    width: 7cm;
+  }
+
+  .controls-container button {
+    font-size: 2cm;
+    /* width: 17.9cm;
+    height: 7cm; */
+    width: 19cm;
+    height: 18cm;
+    border-radius: 0.5cm;
+    /* border-radius: 2cm; */
+    box-shadow: 0 0.3cm 0.8cm rgba(17, 0, 86, 0.2);
+    background-color: black;
+    color: white;
+  }
+
+  .hide {
+    display: none;
+    
+  }
+
+  #moves_count {
+    font-size: large;
+    color: #000000;
+    top: 20%;
+    text-align: center;
+    position: relative;
+  }
+
+  	
+.image {
+  /* max-width: 90px;
+  max-height: 90px;
+  min-width: 90px;
+  min-height: 90px; */
+  width: 90px;
+  height: 90px;
+}
+
+.name-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Add media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+    padding: 1em; /* Adjust padding as needed */
+  }
+
+  .my_name {
+    font-size: 24px; /* Adjust font size as needed */
+    top: 2%; /* Adjust positioning to ensure visibility */
+  }
+
+  .card-container {
+    width: 100%;
+    max-width: 150px; /* Set a maximum width for the card container */
+    height: auto; /* Let the height adjust based on content */
+    padding-bottom: 100%; /* Maintain aspect ratio of 1:1 for the cards */
+  }
+
+  .card-before,
+  .card-after {
+    font-size: 1.2em; /* Adjust font size as needed */
+    width: 100%; /* Make the card before and after full width */
+    height: 100%; /* Make the card before and after full height */
+  }
+
+  .game-container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns for smaller screens */
+  }
+
+  .controls-container button {
+    font-size: 1.2em; /* Adjust font size as needed */
+    width: 100%;
+    height: 6em; /* Adjust height as needed */
+  }
+
+  /* Additional styles for stats-container and stop class */
+  .stats-container {
+    margin-bottom: 0.2em; /* Adjust margin as needed */
+  }
+
+  #stop {
+    font-size: 0.8em; /* Adjust font size as needed */
+    width: 100%; /* Make the button full width */
+  }
+}

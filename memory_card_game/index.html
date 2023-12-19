@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Memory Game</title>
+        <meta name="description" content="memory_game">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="memory_game.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/> 
+    </head>
+    <body>
+      <div class="my_name">Mohammad Belbesi</div>
+      <div class="wrapper">
+        <div class="stats-container">
+          <div id="moves-count"></div>
+          <div id="time"></div>
+        </div>
+        <div class="game-container"></div>
+        <button id="stop" class="hide">Restart Game</button>
+      </div>
+      <div class="controls-container">
+        <p id="result"></p>
+        <button id="start">Start Game</button>
+      </div>
+      <audio id="back-ground-music" src="audio/back-ground-music.mp3" preload="auto"></audio>
+      <audio id="success" src="audio/success.mp3" preload="auto"></audio>
+      <audio id="fail" src="audio/fail.mp3" preload="auto"></audio>
+      <audio id="win" src="audio/win.mp3" preload="auto"></audio>
+      <script src="memory_game.js"></script>
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDh_wBwqVktd-LdXRAlA1HQPNv4yu8zPsg",
+          authDomain: "my-memory-card-game.firebaseapp.com",
+          projectId: "my-memory-card-game",
+          storageBucket: "my-memory-card-game.appspot.com",
+          messagingSenderId: "59131130258",
+          appId: "1:59131130258:web:fe51d85524c863da6c914b",
+          measurementId: "G-6DSE1JNDEM"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    </body>
+</html>
